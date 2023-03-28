@@ -15,7 +15,14 @@ body {
 }
 
 .ml12, .ml13 {
-    font-weight: 200;
+    font-weight: 300;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.ml15 {
+    font-weight: 350;
     font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
@@ -42,4 +49,13 @@ body {
 }
 .button {
     border: none;
+}
+
+.ml14 {
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    background-color: rgba(255, 255, 0, 0.5);
+    border-radius: 150px 10px 150px 10px;
 }

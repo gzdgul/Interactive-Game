@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <meta charset="UTF-8">
     <title>Document</title>
 
 </head>
@@ -38,7 +39,43 @@
                         <br>
                         <button id="fullAccessButton" type="button" class="btn btn-outline-light" disabled>Full Access (Locked)</button>
                     </div>
+                </div>
+                <div id="chapter" class="chapter" style="display: none">
+                    <h1 style="margin-top: 30%" class="ml15" id="chapter_h1">Chapter I</h1>
+                    <br>
+                    <p id="content_p1">Lena, uçak yolculuğu sırasında sık sık uçma korkusu yaşayan bir kadındı. Bu seferki yolculuğu da diğerleri gibi rahat geçmiyordu. Bir anda, uçak motorlarından biri patladı ve uçak adeta bir taş gibi gökyüzünden düştü.</p>
+                    <br>
+                    <div class="nextButtonDiv d-grid gap-2 col-6 mx-auto">
+                        <button id="nextButton" class="btn btn-outline-dark">Next</button>
+                    </div>
+                    <p id="content_p2" style="display: none"> Lena, uçak denize düşmeden önce canını son anda kurtardı ve sırtında yaralarla küçük bir adaya sürüklendi. Uçaktan sağ kurtulan tek kişi olduğunu fark eden Lena, burada yalnız başına hayatta kalmaya çalışmak zorunda kalacaktı.</p>
+                    <br> <br>
+                    <div id="optionsdiv" style="display: none" class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title ml14">OPTION 1</h5>
+                                    <p class="card-text">Etrafı keşfetmek için harekete geç</p>
+                                    <br>
+                                    <div class="choosebutton d-grid gap-2">
+                                        <button id="option1" class="btn btn-outline-dark">Choose</button>
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title ml14">OPTION 2</h5>
+                                    <p class="card-text">Barınak yapmak için malzeme toplamaya başla</p>
+                                    <div class="choosebutton d-grid gap-2">
+                                        <button id="option2" class="btn btn-outline-dark">Choose</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-3">

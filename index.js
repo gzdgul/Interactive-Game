@@ -7,6 +7,9 @@ const element_nameInput = document.getElementById('nameInput');
 const element_welcome_back = document.getElementById('welcome_back');
 const element_welcome_back_h1 = document.getElementById('welcome_back_h1');
 const element_fullAccessButton = document.getElementById('fullAccessButton');
+const element_chapter_h1 = document.getElementById('chapter_h1');
+const element_content_p1 = document.getElementById('content_p1');
+const element_content_p2 = document.getElementById('content_p2');
 
 let username = null;
 
@@ -38,8 +41,51 @@ $(document).ready(function(){
         }
     });
 
+    const chapterName = ['Chapter II', 'Chapter III', 'Chapter IV', 'Chapter V',
+        'Chapter VI', 'Chapter VII', 'Chapter VIII', 'Chapter IX', 'Chapter X'];
+
     $("#playDemo").click(function(){
         $("#home").fadeOut(1000);
+
+        setTimeout(() => {
+            $("#chapter").fadeIn(1000);
+        },2000);
+
+    });
+
+    $("#option1").click(function(){
+        if (chapterName.length > 0) {
+            $("#chapter").fadeOut(1000);
+
+            setTimeout(() => {
+                element_chapter_h1.innerText = chapterName.shift();
+                $("#chapter").fadeIn(1000);
+            },1500);
+        }
+
+
+    });
+
+    $("#option2").click(function(){
+        if (chapterName.length > 0) {
+            $("#chapter").fadeOut(1000);
+
+            setTimeout(() => {
+                element_chapter_h1.innerText = chapterName.shift();
+                $("#chapter").fadeIn(1000);
+            },1500);
+        }
+    });
+
+    $("#nextButton").click(function(){
+            $("#content_p1").fadeOut(1000);
+            $("#nextButton").fadeOut(1000);
+            setTimeout(() => {
+                $("#content_p2").fadeIn(1000);
+            },1000);
+            setTimeout(() => {
+                $("#optionsdiv").fadeIn(1000);
+            },2000);
     });
 
 });
