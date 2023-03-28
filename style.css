@@ -1,0 +1,45 @@
+body {
+    background: url('./assets/images/bg2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.welcome {
+    transition-delay: 1000ms;
+}
+
+.ml12, .ml13 {
+    font-weight: 200;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.glow:hover {
+    color: white;
+    box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
+    transition-duration: 2000ms;
+    transition-delay: 50ms;
+    border-radius: 0.5rem;
+}
+.glow {
+    transition-duration: 2000ms;
+    border: solid 1px white;
+    border-radius: 0.5rem;
+}
+#nameInput::placeholder {
+   opacity: 0.5;
+}
+.button {
+    border: none;
+}

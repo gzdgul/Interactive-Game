@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+<main class="main">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-3">
+                +++
+            </div>
+            <div class="col-6">
+               <div id="maindiv" class="maindiv">
+                   <div class="infodiv" style="margin-top: 45%">
+                       <div class="welcome">
+                           <h1 class="ml12">WELCOME</h1>
+                       </div>
+                       <br>
+                       <div class="inputdiv d-flex justify-content-center">
+                           <div  class="input-group mb-3 w-50 glow">
+                               <input id="nameInput" type="text" class="form-control" placeholder="Please Enter Your Name" autocomplete="off">
+                               <button class="button btn btn-outline-secondary" type="button" id="nameButton" >NEXT</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                <div id="welcome_back" class="welcome_back" style="display: none">
+                    <h1 style="margin-top: 50%" class="ml13" id="welcome_back_h1">...</h1>
+                </div>
+                <div id="home" class="home" style="display: none; margin-top: 50%">
+                    <div id="homeButtons" class="d-grid gap-2 col-6 mx-auto">
+                        <button id="playDemo" type="button" class="btn btn-warning">Play Demo</button>
+                        <br>
+                        <button id="fullAccessButton" type="button" class="btn btn-outline-light" disabled>Full Access (Locked)</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3">
+                +++
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="./assets/js/bootstrap.js"></script>
+<script src="./index.js"></script>
+</html>
