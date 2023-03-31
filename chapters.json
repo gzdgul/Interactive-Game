@@ -1,227 +1,257 @@
 [
   {
     "id": 0,
-    "title": "CHAPTER I",
-    "description": "1",
+    "description": "Bu cinayet vakasını çözmek için sen görevlendirildin. Delilleri inceleyerek ve sanıkları tanıyarak bu cinayet vakasını çözmen gerekiyor. Her detay bu vaka için çok önemli. Seçimlerine dikkat et çünkü bazı seçimlerinden geri dönemezsin ve önemli ipuçlarını kaçırabilirsin. Görevine nasıl başlamak istersin?",
 
     "optionOne": {
-      "description": "1.1",
-      "nextChapterId": "1"
+      "description": "Delilleri incele",
+      "nextChapterId": 1
     },
 
     "optionTwo": {
-      "description": "1.2",
-      "nextChapterId": "2"
+      "description": "Tanıklarla konuş",
+      "nextChapterId": 2
     }
 
   },
   {
     "id": 1,
-    "title": "CHAPTER II",
-    "description": "1.1",
+    "description": "Delilleri incelemek için olayın gerçekleştiği konuma gittin. Sitenin bahçesine girdiğinde ilk dikkatini çeken şey güvenlik kameraları oldu. Fakat çok vaktin yoktu. Bir an önce olayı çözmen gerektiğinin farkındaydın. ",
 
     "optionOne": {
-      "description": "1.1.1",
-      "nextChapterId": "3"
+      "description": "Olay yerini incele",
+      "nextChapterId": 3
     },
 
     "optionTwo": {
-      "description": "1.1.2",
-      "nextChapterId": "4"
+      "description": "Güvenlik kameralarını incele",
+      "nextChapterId": 4
     }
   },
   {
     "id": 2,
-    "title": "CHAPTER II",
-    "description": "1.2",
+    "description": "Tanıklarla konuşmak için olayın gerçekleştiği konuma gittin. Tanıklarla konuşarak önemli bir ipucu elde etmeyi planlıyorsun. Peki kimle konuşacaksın?",
     "optionOne": {
-      "description": "1.2.1",
-      "nextChapterId": "5"
+      "description": "Sitenin güvenliği ile konuş",
+      "nextChapterId": 5
     },
+
     "optionTwo": {
-      "description": "1.2.2",
-      "nextChapterId": "6"
+      "description": "Üst Komşu ile konuş",
+      "nextChapterId": 6
     }
 
   },
   {
     "id": 3,
-    "title": "CHAPTER III",
-    "description": "1.1.1",
+    "description": "Olay yerini incelemek için eve girdin. Olayın geçtiği odaya vardığında Selin'in cesediyle karşılaştın. Bir süre bakıştıktan sonra olay yerini incelemeye koyuldun. Olay yerini inceledikten sonra bir adet eski tip silah buldun. ",
 
     "optionOne": {
-      "description": "1.1.1.1",
-      "nextChapterId": "7"
+      "description": "Silahı incele",
+      "nextChapterId": 7
     },
 
     "optionTwo": {
-      "description": "1.1.1.2",
-      "nextChapterId": "8"
+      "description": "Olay yerine daha detaylı bak",
+      "nextChapterId": 8
+    },
+
+    "action": {
+      "actionType": "evidence",
+      "evidence": "gun"
     }
+
   },
   {
     "id": 4,
-    "title": "CHAPTER III",
-    "description": "1.1.2",
+    "description": " Evin güvenlik kameralarının kayıtları inceledi. Fakat en son kayıt bir hafta öncesine aitti. Bu durum biraz garip geldi. Ya kameralar son bir haftayı kaydetmemişti ya da güvenlik kameralarının kayıtları silinmiş olabilirdi. Maalesef güvenlik kameralarından delil niteliğinde bir şey çıkmadı.",
 
     "optionOne": {
-      "description": "1.1.2.1",
-      "nextChapterId": "9"
+      "description": "Olay yerini incele",
+      "nextChapterId": 3
     },
 
     "optionTwo": {
-      "description": "1.1.2.2",
-      "nextChapterId": "10"
+      "description": "Tanıklarla konuş",
+      "nextChapterId": 2
     }
   },
   {
     "id": 5,
-    "title": "CHAPTER III",
-    "description": "1.2.1",
+    "description": "Sitenin güvenliği ile konuştun iki isim verdi sevgilisi CAN , arkadaşı ZEYNEP",
 
     "optionOne": {
-      "description": "1.2.1.1",
-      "nextChapterId": "11"
+      "description": "Can'ı sorguya çek",
+      "nextChapterId": 9
     },
 
     "optionTwo": {
-      "description": "1.2.1.2",
-      "nextChapterId": "12"
+      "description": "Zeynep'i sorguya çek",
+      "nextChapterId": 10
     }
   },
   {
     "id": 6,
-    "title": "CHAPTER III",
-    "description": "1.2.2",
+    "description": "Üst komşu ile konuştun ayrıca üst komşun selinin teyzesi olduğunu söyledi iki isim verdi iş arkadaşı Tuğba , kuzeni Arda",
 
     "optionOne": {
-      "description": "1.2.2.1",
-      "nextChapterId": "13"
+      "description": "Tuğba'yı sorguya çek",
+      "nextChapterId": 11
     },
 
     "optionTwo": {
-      "description": "1.2.2.2",
-      "nextChapterId": "14"
+      "description": "Arda'yı sorguya çek",
+      "nextChapterId": 12
     }
   },
   {
     "id": 7,
-    "title": "CHAPTER IV",
-    "description": "1.1.1.1",
+    "description": "Silahın seri numarası '450087' olarak tespit edildi. Silahın sol tarafında avuç izi tespit edildi. Görünüşe bakılırsa katil silahı sol eliyle tutmuş.",
 
     "optionOne": {
-      "description": "1.1.1.1.1",
-      "nextChapterId": "15"
+      "description": "Olay yerine daha detaylı bak",
+      "nextChapterId": 8
     },
 
     "optionTwo": {
-      "description": "1.1.1.1.2",
-      "nextChapterId": "16"
+      "description": "Olay yerinden ayrıl",
+      "nextChapterId": 15
+    },
+
+    "action": {
+      "actionType": "evidence",
+      "evidence": "gunContent"
     }
+
   },
   {
     "id": 8,
-    "title": "CHAPTER IV",
-    "description": "1.1.1.2",
+    "description": "Olay yerine daha detaylı baktın ve parmak izlerine rastladın. Parmak izlerinin örneğini aldın.",
 
     "optionOne": {
-      "description": "1.1.1.2.1",
-      "nextChapterId": "17"
+      "description": "Olay yerine daha detaylı bak",
+      "nextChapterId": 15
     },
 
     "optionTwo": {
-      "description": "1.1.1.2.2",
-      "nextChapterId": "18"
+      "description": "Olay yerinden ayrıl",
+      "nextChapterId": 15
+    },
+
+    "action": {
+      "actionType": "evidence",
+      "evidence": "fingerprint"
+    }
+
+  },
+  {
+    "id": 9,
+    "description": "Can'ı sorguya çektiğinde şunları buldun: ",
+
+    "optionOne": {
+      "description": "Ayrıl",
+      "nextChapterId": null
+    },
+
+    "optionTwo": {
+      "description": "canın telefonuna detaylı inceleme yapmak için el koy",
+      "nextChapterId": 14
+    },
+
+    "action": {
+      "actionType": "suspect",
+      "suspect": "Can"
+    }
+
+  },
+  {
+    "id": 10,
+    "description": "Zeynep'i sorguya çektiğinde şunları buldun",
+
+    "optionOne": {
+      "description": "Ayrıl",
+      "nextChapterId": null
+    },
+
+    "optionTwo": {
+      "description": "Üst komşu ile konuş",
+      "nextChapterId": 6
     }
   },
   {
-      "id": 9,
-      "title": "CHAPTER IV",
-      "description": "1.1.2.1",
+    "id": 11,
+    "description": "Tuğba'yı sorguya çektiğinde şunları buldun",
 
-      "optionOne": {
-        "description": "1.1.2.1.1",
-        "nextChapterId": "17"
-      },
+    "optionOne": {
+      "description": "Ayrıl",
+      "nextChapterId": null
+    },
 
-      "optionTwo": {
-        "description": "1.1.2.1.2",
-        "nextChapterId": "18"
-      }
+    "optionTwo": {
+      "description": "Sitenin güvenliği ile konuş",
+      "nextChapterId": 5
+    }
   },
   {
-      "id": 10,
-      "title": "CHAPTER IV",
-      "description": "1.1.2.2",
+    "id": 12,
+    "description": "Arda'yı sorguya çektiğinde şunları buldun",
 
-      "optionOne": {
-        "description": "1.1.2.2.1",
-        "nextChapterId": "19"
-      },
+    "optionOne": {
+      "description": "Ayrıl",
+      "nextChapterId": ""
+    },
 
-      "optionTwo": {
-        "description": "1.1.2.2.2",
-        "nextChapterId": "20"
-      }
+    "optionTwo": {
+      "description": "Sitenin güvenliği ile konuş",
+      "nextChapterId": 5
+    }
   },
   {
-      "id": 11,
-      "title": "CHAPTER IV",
-      "description": "1.2.1.1",
+    "id": 13,
+    "description": "Olay yerine daha detaylı baktın ve x buldun",
 
-      "optionOne": {
-        "description": "1.2.1.1.1",
-        "nextChapterId": "21"
-      },
+    "optionOne": {
+      "description": "x i incele",
+      "nextChapterId": 15
+    },
 
-      "optionTwo": {
-        "description": "1.2.1.1.2",
-        "nextChapterId": "22"
-      }
+    "optionTwo": {
+      "description": "Olay yerine daha detaylı bak",
+      "nextChapterId": 15
+    }
   },
   {
-      "id": 12,
-      "title": "CHAPTER IV",
-      "description": "1.2.1.2",
+    "id": 14,
+    "description": "Telefonu inceledin testtestest",
 
-      "optionOne": {
-        "description": "1.2.1.2.1",
-        "nextChapterId": "23"
-      },
+    "optionOne": {
+      "description": "1.2.2.2.1",
+      "nextChapterId": 27
+    },
 
-      "optionTwo": {
-        "description": "1.2.1.2.2",
-        "nextChapterId": "24"
-      }
+    "optionTwo": {
+      "description": "1.2.2.2.2",
+      "nextChapterId": 28
+    },
+
+    "action": {
+      "actionType": "evidence",
+      "evidence": "phone"
+    }
+
   },
   {
-      "id": 13,
-      "title": "CHAPTER IV",
-      "description": "1.2.2.1",
+    "id": 15,
+    "description": "Olay yerinde gözüne çarpan başka bir delil olmadı.",
 
-      "optionOne": {
-        "description": "1.2.2.1.1",
-        "nextChapterId": "25"
-      },
+    "optionOne": {
+      "description": "Tanıklarla Konuş",
+      "nextChapterId": 2
+    },
 
-      "optionTwo": {
-        "description": "1.2.2.1.2",
-        "nextChapterId": "26"
-      }
-  },
-  {
-      "id": 14,
-      "title": "CHAPTER IV",
-      "description": "1.2.2.2",
-
-      "optionOne": {
-        "description": "1.2.2.2.1",
-        "nextChapterId": "27"
-      },
-
-      "optionTwo": {
-        "description": "1.2.2.2.2",
-        "nextChapterId": "28"
-      }
+    "optionTwo": {
+      "description": "1.2.2.2.2",
+      "nextChapterId": 28
+    }
   }
-  ]
+]

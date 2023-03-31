@@ -9,11 +9,78 @@
 
 </head>
 <body>
+
+<div class="modal" id="SuspectFileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="SuspectName">Modal title</h1>
+                <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="suspectContent"></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <main class="main">
     <div class="container text-center">
         <div class="row">
-            <div class="col-3">
-                +++
+            <div class="col-3" >
+                <div id="delil_h5" class="delil_h5" style="display: none;">
+                    <h5 class="ml16 mt-5">Deliller</h5>
+                    <hr>
+                </div>
+                <div id="deliller" class="container1" style="display: none">
+                    <div id="gun" class="card" style="--clr: #1a1a1a; --rotate: -3deg; display: none;">
+                        <div class="imgBx">
+                            <img src="./assets/images/gun.png">
+                        </div>
+                        <div  class="content">
+                            <h2>Silah</h2>
+                            <p id="unknown">????</p>
+                            <div id="gun_secret_content" style="display: none">
+                                <p>Seri Numarası: 450087</p>
+                                <p>Sol el ile tutulmuş</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fingerprint" class="card" style="--clr: #009688; --rotate: 3deg; display: none;">
+                        <div class="imgBx">
+                            <img src="./assets/images/fingerprint.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Parmak izi</h2>
+                            <p>Olay yerinden alınmış parmak izleri</p>
+                            <p id="unknown2" style="display: none">????</p>
+                            <div id="fingerprint_secret_content" style="display: none">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="phone" class="card" style="--clr: #009688; --rotate: -3deg; display: none;">
+                        <div class="imgBx">
+                            <img src="./assets/images/phone.png">
+                        </div>
+                        <div class="content">
+                            <h2>Can'ın telefonu</h2>
+                            <p>Zeynep ile yazışmalar</p>
+                        </div>
+                    </div>
+                    <div class="card" style="--clr: #009688; --rotate: 3deg; display: none;">
+                        <div class="imgBx">
+                            <img src="">
+                        </div>
+                        <div class="content">
+                            <h2>dfsfdf</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, doloremque.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-6">
                <div id="maindiv" class="maindiv">
@@ -43,19 +110,28 @@
                 <div id="chapter" class="chapter" style="display: none">
                     <h1 style="margin-top: 30%" class="ml15" id="chapter_h1">Chapter I</h1>
                     <br>
-                    <p id="content_p1">Lena, uçak yolculuğu sırasında sık sık uçma korkusu yaşayan bir kadındı. Bu seferki yolculuğu da diğerleri gibi rahat geçmiyordu. Bir anda, uçak motorlarından biri patladı ve uçak adeta bir taş gibi gökyüzünden düştü.</p>
+                    <p id="content_p1">Selin ve Can, birbirlerine aşık bir çiftti. Ancak ilişkileri son zamanlarda kötüye gitmeye başladı ve sık sık tartışıyorlardı. Bir gece, Selin evinde yalnızken bir saldırgan evin kapısını kırarak içeri girdi ve onu öldürdü. Polis olay yerini inceledi ve saldırganın kimliğini belirlemeye çalıştı. Ancak katilin kimliği belirsizdi ve olayın arka planını çözmek için çok az ipucu vardı.</p>
                     <br>
                     <div class="nextButtonDiv d-grid gap-2 col-6 mx-auto">
                         <button id="nextButton" class="btn btn-outline-dark">Next</button>
                     </div>
-                    <p id="content_p2" style="display: none"> Lena, uçak denize düşmeden önce canını son anda kurtardı ve sırtında yaralarla küçük bir adaya sürüklendi. Uçaktan sağ kurtulan tek kişi olduğunu fark eden Lena, burada yalnız başına hayatta kalmaya çalışmak zorunda kalacaktı.</p>
+                    <p id="content_p2" style="display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dignissimos doloribus maiores sit voluptates. Dolore eius illum necessitatibus quia sit.</p>
+                    <div id="suspect_file_button_div" class="suspect_file" style="display: none">
+                        <div class="suspect_file_button" type="button">
+                            <div class="button_S"></div>
+                            <div class="suspect_file_content">
+                                <p id="a">Sorgu Dosyası</p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                     <br> <br>
                     <div id="optionsdiv" style="display: none" class="row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title ml14">OPTION 1</h5>
-                                    <p class="card-text" id="option1_p">Etrafı keşfetmek için harekete geç</p>
+                                    <p class="card-text" id="option1_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                     <div class="choosebutton d-grid gap-2">
                                         <button id="option1" class="btn btn-outline-dark">Choose</button>
                                     </div>
@@ -67,7 +143,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title ml14">OPTION 2</h5>
-                                    <p class="card-text" id="option2_p">Barınak yapmak için malzeme toplamaya başla</p>
+                                    <p class="card-text" id="option2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                     <div class="choosebutton d-grid gap-2">
                                         <button id="option2" class="btn btn-outline-dark">Choose</button>
                                     </div>
@@ -78,7 +154,52 @@
                 </div>
             </div>
             <div class="col-3">
-                +++
+                <div id="sanık_h5" style="display: none">
+                    <h5 class="ml16 mt-5">Sanıklar</h5>
+                    <hr>
+                </div>
+                <div id="saniklar" class="container1" style="display: none">
+                    <div id="Can" class="card" style="--clr: #8cab30; --rotate: -3deg; display: none">
+                        <div class="imgBx">
+                            <img src="./assets/images/can.png">
+                        </div>
+                        <div class="content">
+                            <h2>Can</h2>
+                            <p>Can'ın Sorgu Dosyası</p>
+                            <button class="btn buttonSuspect">İncele</button>
+                        </div>
+                    </div>
+                    <div class="card" style="--clr: #b061a7; --rotate: 3deg; display: none">
+                        <div class="imgBx">
+                            <img src="./assets/images/zeynep.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Zeynep</h2>
+                            <p>Zeynep'in Sorgu Dosyası</p>
+                            <button class="btn buttonSuspect">İncele</button>
+                        </div>
+                    </div>
+                    <div class="card" style="--clr: #cb6e31; --rotate: -3deg; display: none">
+                        <div class="imgBx">
+                            <img src="./assets/images/tugba.jpg">
+                        </div>
+                        <div class="content">
+                            <h2>Tuğba</h2>
+                            <p>Tuğba'nın Sorgu Dosyası</p>
+                            <button class="btn buttonSuspect">İncele</button>
+                        </div>
+                    </div>
+                    <div class="card" style="--clr: #0d6f9a; --rotate: 3deg; display: none">
+                        <div class="imgBx">
+                            <img src="./assets/images/arda.png">
+                        </div>
+                        <div class="content">
+                            <h2>Arda</h2>
+                            <p>Arda'nın Sorgu Dosyası</p>
+                            <button class="btn buttonSuspect">İncele</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

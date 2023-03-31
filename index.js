@@ -12,13 +12,16 @@ const element_content_p1 = document.getElementById('content_p1');
 const element_content_p2 = document.getElementById('content_p2');
 
 let username = null;
+const chapterName = ['Chapter I', 'Chapter II', 'Chapter III', 'Chapter IV', 'Chapter V',
+    'Chapter VI', 'Chapter VII', 'Chapter VIII', 'Chapter IX', 'Chapter X'];
 
-const audio = new Audio("./assets/sound/click.mp3");
+const click_audio = new Audio("./assets/sound/click.mp3");
+const beep_audio = new Audio("./assets/sound/beep.mp3");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        audio.play();
+        click_audio.play();
     });
 });
 fetch('./chapters.json')
@@ -44,11 +47,6 @@ $(document).ready(function(){
         }
     });
 
-    /*
-    const chapterName = ['Chapter II', 'Chapter III', 'Chapter IV', 'Chapter V',
-        'Chapter VI', 'Chapter VII', 'Chapter VIII', 'Chapter IX', 'Chapter X'];
-    */
-
     $("#playDemo").click(function(){
         $("#home").fadeOut(1000);
 
@@ -67,8 +65,6 @@ $(document).ready(function(){
                 $("#chapter").fadeIn(1000);
             },1500);
         }
-
-
     });
 
     $("#option2").click(function(){
@@ -82,7 +78,6 @@ $(document).ready(function(){
         }
     });
 
-    // TODO: ANİMASYON FADE BAK!
     $("#nextButton").click(function(){
         new ChapterCreator(chapterOne);
         // Chapterın fadeOut'ıyla fixlemek için setTimeout verildi.
@@ -99,6 +94,16 @@ $(document).ready(function(){
     });
 
 });
+
+        $('#suspect_file_button_div').click(() => {
+            alert(1);
+            $("#SuspectFileModal").fadeIn(400);
+        });
+
+        $('#close').click(() => {
+            alert(1);
+            $("#SuspectFileModal").fadeOut(400);
+        });
 
 anime.timeline({loop: true})
     .add({
@@ -121,44 +126,103 @@ anime.timeline({loop: true})
 class ChapterCreator {
     constructor(chapter) {
         this.id = chapter.id;
+        if (chapter.action) {
+            this.action = chapter.action;
+            this.actionType = chapter.action.actionType;
+            if (this.actionType === 'suspect') {
+                this.suspect = chapter.action.suspect;
+                this.suspects(this.suspect);
+            }
+            if (this.actionType === 'evidence') {
+                this.evidence = chapter.action.evidence;
+                this.evidences(this.evidence);
+            }
+
+        }
         $("#chapter").fadeOut(1000);
         setTimeout(() => {
             $('#chapter #option1').unbind('click');
             $('#chapter #option2').unbind('click');
-            $('#chapter #chapter_h1').text(chapter.title);
+            $('#chapter #chapter_h1').text(chapterName.shift());
             $('#chapter #content_p2').text(chapter.description);
             $('#chapter #option1_p').text(chapter.optionOne.description);
             $('#chapter #option1').bind('click', () => {
-                this.nextChapterId = chapter.optionOne.nextChapterId;
-                this.clickOption(this.nextChapterId);
+                this.clickOption(chapter.optionOne.nextChapterId);
             });
             $('#chapter #option2_p').text(chapter.optionTwo.description);
             $('#chapter #option2').bind('click', () => {
-                this.nextChapterId = chapter.optionTwo.nextChapterId;
-                this.clickOption(this.nextChapterId);
+                this.clickOption(chapter.optionTwo.nextChapterId);
             });
             $("#chapter").fadeIn(1000);
         },1500);
+
     }
     clickOption(ChapterId) {
-        const nextChapter = new Chapter(
-            chapters[ChapterId].id,
-            chapters[ChapterId].title,
-            chapters[ChapterId].description,
-            new Option(chapters[ChapterId].optionOne.description, chapters[ChapterId].optionOne.nextChapterId),
-            new Option(chapters[ChapterId].optionTwo.description, chapters[ChapterId].optionTwo.nextChapterId)
-        )
-        new ChapterCreator(nextChapter);
+        const selectedChapter = chapters.find(x => x.id === ChapterId);
+        if (selectedChapter) {
+            const nextChapter = new Chapter(
+                selectedChapter.id,
+                selectedChapter.description,
+                new Option(selectedChapter.optionOne.description, selectedChapter.optionOne.nextChapterId),
+                new Option(selectedChapter.optionTwo.description, selectedChapter.optionTwo.nextChapterId),
+                selectedChapter.action
+
+            )
+            new ChapterCreator(nextChapter);
+        }
+    }
+    suspects(suspect) {
+        beep_audio.play();
+        fetch('./suspectFiles.json')
+            .then((response) => response.json())
+            .then((suspectFiles) => {
+                const SuspectFile = suspectFiles.find(x => x.suspect === suspect);
+                this.suspectFileContent = SuspectFile.suspectFileContent;
+                $('#SuspectName').text(suspect);
+                $('#suspectContent').text(this.suspectFileContent);
+                setTimeout(() => {
+                    $("#suspect_file_button_div").fadeIn(1000);
+                },1000);
+                $("#sanık_h5").fadeIn(300);
+                $("#saniklar").fadeIn(300);
+                $("#" + suspect).fadeIn(300);
+            });
+    }
+
+    evidences(evidence) {
+        beep_audio.play();
+        $("#delil_h5").fadeIn(300);
+        $("#deliller").fadeIn(300);
+
+        if (evidence === 'gun') {
+            $("#gun").fadeIn(300);
+        }
+
+        if (evidence === 'gunContent') {
+            $("#gun_secret_content").fadeIn(100);
+            $("#unknown").fadeOut(100);
+        }
+
+        if (evidence === 'fingerprint') {
+            $("#fingerprint").fadeIn(300);
+        }
+
+        if (evidence === 'phone') {
+            $("#phone").fadeIn(300);
+        }
+
     }
 }
 
 class Chapter {
-    constructor(id, title, description, optionOne, optionTwo) {
+    constructor(id, description, optionOne, optionTwo, action) {
         this.id = id;
-        this.title = title;
         this.description = description;
         this.optionOne = optionOne;
         this.optionTwo = optionTwo;
+        if (action) {
+            this.action = action;
+        }
     }
 }
 
@@ -167,79 +231,13 @@ class Option {
         this.description = description;
         this.nextChapterId = nextChapterId;
     }
-
 }
 
     const chapterOne = new Chapter(
     chapters[0].id,
-    chapters[0].title,
     chapters[0].description,
     new Option(chapters[0].optionOne.description, chapters[0].optionOne.nextChapterId),
-    new Option(chapters[0].optionTwo.description, chapters[0].optionTwo.nextChapterId)
+    new Option(chapters[0].optionTwo.description, chapters[0].optionTwo.nextChapterId),
     )
 
 });
-
-        /*
-            const chapter1_1 = new Chapter(
-            'CHAPTER 2',
-            'HMM',
-            new Option('AAA', null),
-            new Option('BBB', null)
-            )
-
-            const chapter1_2 = new Chapter(
-            'CHAPTER 2',
-            'TMM',
-            new Option('CCC', null),
-            new Option('DDD', null)
-            )
-        */
-/*
-    const chapterOne = new Chapter(
-    'CHAPTER I',
-    'EVE GELDİM',
-    new Option('MONTUNU ÇIKAR', chapter1_1),
-    new Option('AYAKKABINI ÇIKAR', chapter1_2)
-    )
-
-*/
-
-
-
-
-
-/*
-const chooses = {
-
-    title: 'CHAPTER 1',
-    description: 'EVE GELDİM',
-    optionOne: {
-        description: 'MONTUNU ÇIKAR',
-        chapter: {
-            title: 'CHAPTER 2_1',
-            description: 'HM',
-            optionOne: {
-                description: 'AAA'
-            },
-            optionTwo: {
-                description: 'BBB'
-            }
-        }
-    },
-    optionTwo: {
-        description: 'AYAKKABINI ÇIKAR',
-        chapter: {
-            title: 'CHAPTER 2_2',
-            description: 'HAAM',
-            optionOne: {
-                description: 'CCC'
-            },
-            optionTwo: {
-                description: 'DDD'
-            }
-        }
-    }
-}
-
- */

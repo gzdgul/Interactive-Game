@@ -1,0 +1,18 @@
+[
+  {
+    "suspect": "Can",
+    "suspectFileContent": "Soru: Merhaba Can, senin Selin'in sevgilisi olduğunu biliyoruz. +tab+ Geçmişte onunla birlikte olan başka bir erkek arkadaşı var mıydı?\nCevap: Merhaba. Selin ile birlikte olan başka bir erkek arkadaşı olup olmadığını bilmiyorum. Ancak Selin'in önceki ilişkileri hakkında bilgi sahibi olduğumu sanmıyorum.\n\nSoru: Selin ve sen arasında son zamanlarda bir tartışma yaşandı mı?\nCevap: Evet, tartışmalarımız oluyordu. Ama her ilişkide olduğu gibi, küçük tartışmalar olurdu. Büyük bir kavga ettiğimizi hatırlamıyorum.\n\nSoru: Selin, son zamanlarda herhangi bir tehdit mesajı veya şüpheli bir kişi hakkında bahsetti mi?\nCevap: Hayır, hiçbir şey söylemedi. Ama eğer bir şey bilseydim, polisle hemen iletişime geçerdim.\n\nSoru: Selin'in öldürüldüğü gece neredeydin?\nCevap: O gece iş yerindeydim. Gece geç saatlere kadar çalışıyordum. İş yerimdeki güvenlik kamerası görüntüleri de bunu doğrulayabilir. Ayrıca, iş arkadaşlarım da benimle birlikteydi. Eve geldiğimde, polisleri evde buldum ve ne olduğunu öğrendim.\n\nSoru: Selin'in öldürülmesinden önce son kez hangi konuda konuştunuz?\nCevap: O gece, Selin ile telefonla konuştuk. Planlarımızı konuşuyorduk ve hafta sonu birlikte nereye gideceğimizi tartışıyorduk.\n\nSoru: Selin'in öldürülmesiyle ilgili olarak polisle tam işbirliği içinde misin?\nCevap: Elbette. Polisle tam işbirliği içindeyim ve herhangi bir şeyi gizlemek istemiyorum. Selin'in öldürülmesi beni derinden etkiledi ve katilin bulunmasına yardımcı olmak istiyorum.\n\nSoru: Selin'in öldürülmesi hakkında ne düşünüyorsun? Kim olabilir?\nCevap: Gerçekten bilmiyorum. Kimin yaptığını düşünüyorsunuz? Selin'in öldürülmesi benim için şok edici oldu. Şu anda kafam karışık ve üzgünüm."
+  },
+  {
+    "suspect": "Zeynep",
+    "suspectFileContent": ""
+  },
+  {
+    "suspect": "Tuğba",
+    "suspectFileContent": ""
+  },
+  {
+    "suspect": "Arda",
+    "suspectFileContent": ""
+  }
+]
